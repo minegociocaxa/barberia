@@ -21,6 +21,18 @@
       position: relative;
       overflow: hidden;
     }
+    .beard-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1rem;
+      animation: fadeInDown 1.2s;
+    }
+    .beard-svg {
+      width: 120px;
+      height: 120px;
+      filter: drop-shadow(0 4px 12px #000);
+    }
     .logo {
       font-size: 2.8rem;
       font-weight: 700;
@@ -150,6 +162,7 @@
       .container { padding: 1.2rem;}
       .services { flex-direction: column; gap: 1.2rem;}
       nav { margin-top: 1rem;}
+      .beard-svg { width: 90px; height: 90px; }
     }
   </style>
   <!-- Iconos FontAwesome -->
@@ -157,6 +170,22 @@
 </head>
 <body>
   <header>
+    <div class="beard-image">
+      <!-- SVG Hombre con barba -->
+      <svg class="beard-svg" viewBox="0 0 120 120" fill="none">
+        <ellipse cx="60" cy="60" rx="45" ry="55" fill="#232526"/>
+        <ellipse cx="60" cy="68" rx="30" ry="39" fill="#414345"/>
+        <ellipse cx="60" cy="58" rx="22" ry="22" fill="#2d2d2d"/>
+        <ellipse cx="60" cy="62" rx="19" ry="14" fill="#181818"/>
+        <ellipse cx="44" cy="55" rx="5" ry="3" fill="#fff"/>
+        <ellipse cx="76" cy="55" rx="5" ry="3" fill="#fff"/>
+        <path d="M45 73 Q60 95 75 73" stroke="#d4af37" stroke-width="6" fill="none" />
+        <ellipse cx="60" cy="90" rx="20" ry="14" fill="#181818"/>
+        <ellipse cx="60" cy="97" rx="15" ry="10" fill="#232526"/>
+        <ellipse cx="60" cy="91" rx="6" ry="4" fill="#d4af37"/>
+        <ellipse cx="60" cy="93" rx="8" ry="5" fill="#232526" opacity="0.6"/>
+      </svg>
+    </div>
     <div class="logo">BarberShop</div>
     <div class="subtitle">Tu Estilo, Tu Personalidad</div>
     <nav>
