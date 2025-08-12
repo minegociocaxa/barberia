@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BarberShop - Tu Estilo en Av. Perú 123</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: #181818;
+      color: #f1f1f1;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+    header {
+      background: linear-gradient(90deg, #232526 0%, #414345 100%);
+      text-align: center;
+      padding: 3rem 1rem 2rem 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .beard-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1rem;
+      animation: fadeInDown 1.2s;
+    }
+    .beard-svg {
+      width: 120px;
+      height: 120px;
+      filter: drop-shadow(0 4px 12px #000);
+    }
+    .logo {
+      font-size: 2.8rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #d4af37;
+      animation: fadeInDown 1.2s;
+    }
+    .subtitle {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+      color: #aaa;
+      animation: fadeInUp 1.2s;
+    }
+    nav {
+      margin-top: 2rem;
+      animation: fadeIn 2s;
+    }
+    nav a {
+      color: #f1f1f1;
+      text-decoration: none;
+      margin: 0 1.2rem;
+      font-weight: 700;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #d4af37;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: rgba(30,30,30,0.95);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px 0 rgba(0,0,0,0.5);
+      animation: fadeIn 1.7s;
+    }
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .service-card {
+      flex: 1 1 250px;
+      background: #232526;
+      border-radius: 15px;
+      padding: 1.8rem 1.2rem;
+      text-align: center;
+      box-shadow: 0 4px 16px 0 rgba(0,0,0,0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+      animation: floatIn 1.5s;
+    }
+    .service-card:hover {
+      transform: translateY(-10px) scale(1.04);
+      box-shadow: 0 8px 32px 0 #d4af37a0;
+    }
+    .service-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.8rem;
+      color: #d4af37;
+      animation: pulse 2s infinite;
+    }
+    .service-title {
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      color: #f1f1f1;
+    }
+    .service-desc {
+      color: #bbbbbb;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .contact-section {
+      text-align: center;
+      margin-top: 3rem;
+      animation: fadeInUp 1.3s;
+    }
+    .contact-info {
+      font-size: 1.1rem;
+      background: #232526;
+      display: inline-block;
+      padding: 1rem 2rem;
+      border-radius: 12px;
+      margin-top: 1rem;
+      color: #d4af37;
+      box-shadow: 0 2px 8px 0 rgba(0,0,0,0.2);
+      animation: pulse 2s infinite;
+    }
+    footer {
+      text-align: center;
+      background: #232526;
+      color: #999;
+      padding: 1.2rem 0;
+      font-size: 0.98rem;
+      margin-top: 2rem;
+      border-radius: 0 0 20px 20px;
+      animation: fadeIn 2.2s;
+    }
+
+    /* Animaciones */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    @keyframes fadeIn {
+      from { opacity: 0;}
+      to { opacity: 1;}
+    }
+    @keyframes floatIn {
+      0% { opacity: 0; transform: scale(0.95);}
+      70% { opacity: 0.7; transform: scale(1.05);}
+      100% { opacity: 1; transform: scale(1);}
+    }
+    @keyframes pulse {
+      0%, 100% { color: #d4af37;}
+      50% { color: #f1c255;}
+    }
+    /* Responsive */
+    @media (max-width: 700px) {
+      .container { padding: 1.2rem;}
+      .services { flex-direction: column; gap: 1.2rem;}
+      nav { margin-top: 1rem;}
+      .beard-svg { width: 90px; height: 90px; }
+    }
+  </style>
+  <!-- Iconos FontAwesome -->
+  <script src="https://kit.fontawesome.com/4d41b6e453.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <div class="beard-image">
+      <!-- SVG Hombre con barba -->
+      <svg class="beard-svg" viewBox="0 0 120 120" fill="none">
+        <ellipse cx="60" cy="60" rx="45" ry="55" fill="#232526"/>
+        <ellipse cx="60" cy="68" rx="30" ry="39" fill="#414345"/>
+        <ellipse cx="60" cy="58" rx="22" ry="22" fill="#2d2d2d"/>
+        <ellipse cx="60" cy="62" rx="19" ry="14" fill="#181818"/>
+        <ellipse cx="44" cy="55" rx="5" ry="3" fill="#fff"/>
+        <ellipse cx="76" cy="55" rx="5" ry="3" fill="#fff"/>
+        <path d="M45 73 Q60 95 75 73" stroke="#d4af37" stroke-width="6" fill="none" />
+        <ellipse cx="60" cy="90" rx="20" ry="14" fill="#181818"/>
+        <ellipse cx="60" cy="97" rx="15" ry="10" fill="#232526"/>
+        <ellipse cx="60" cy="91" rx="6" ry="4" fill="#d4af37"/>
+        <ellipse cx="60" cy="93" rx="8" ry="5" fill="#232526" opacity="0.6"/>
+      </svg>
+    </div>
+    <div class="logo">BarberShop</div>
+    <div class="subtitle">Tu Estilo, Tu Personalidad</div>
+    <nav>
+      <a href="#servicios">Servicios</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#ubicacion">Ubicación</a>
+    </nav>
+  </header>
+  <main class="container">
+    <section id="servicios">
+      <h2 style="color:#d4af37; text-align:center; font-size:2rem;">Nuestros Servicios</h2>
+      <div class="services">
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-cut"></i></div>
+          <div class="service-title">Corte de Pelo</div>
+          <div class="service-desc">Estilos clásicos y modernos realizados por expertos.</div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
+          <div class="service-title">Tinte de Pelo</div>
+          <div class="service-desc">Coloración profesional que cuida tu cabello.</div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-beard"></i></div>
+          <div class="service-title">Perfilado de Barba</div>
+          <div class="service-desc">Barbas perfectamente perfiladas y cuidadas.</div>
+        </div>
+      </div>
+    </section>
+    <section id="contacto" class="contact-section">
+      <h2 style="color:#d4af37;">Contáctanos</h2>
+      <div class="contact-info">
+        <i class="fas fa-phone-alt"></i> Teléfono: <a href="tel:969843051" style="color:#d4af37;text-decoration:none;">969843051</a><br>
+        <i class="fas fa-map-marker-alt"></i> Dirección: Av. Perú 123
+      </div>
+    </section>
+    <section id="ubicacion" class="contact-section">
+      <h2 style="color:#d4af37;">¿Dónde Estamos?</h2>
+      <div class="contact-info" style="background:#181818;">
+        Av. Perú 123, BarberShop<br>
+        <iframe
+          src="https://www.google.com/maps?q=Av.+Peru+123&output=embed"
+          width="90%" height="200" style="border-radius:10px; border:none; margin-top:0.5rem;"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+  </main>
+  <footer>
+    © 2025 BarberShop. Todos los derechos reservados. | Síguenos en <a href="#" style="color:#d4af37;">Instagram</a> y <a href="#" style="color:#d4af37;">Facebook</a>
+  </footer>
+</body>
+</html>
